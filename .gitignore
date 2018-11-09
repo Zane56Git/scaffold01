@@ -1,0 +1,11 @@
+/.settings/
+/.classpath
+/.project
+/target/
+/logs/
+/.classpath
+/.springBeans
+/.settings/
+/transaction-logs/
+.idea/
+/.factorypath

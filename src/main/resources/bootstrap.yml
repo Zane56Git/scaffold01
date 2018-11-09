@@ -1,0 +1,6 @@
+eureka :         
+  client : 
+    service-url : 
+      defaultZone : http://192.168.36.2:8761/eureka/
+    register-with-eureka: false 
+    fetch-registry : false  
