@@ -8,152 +8,29 @@
 	<packaging>jar</packaging>
 	<name>scaffold</name>
 	<url>http://maven.apache.org</url>
-	
+
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.3.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>2.0.0.RELEASE</version>
 	</parent>
 
-	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<junit.version>4.12</junit.version>
-		<druid.version>1.1.10</druid.version>
-		<log4j.version>1.2.16</log4j.version>
-		<ojdbc7.version>12.1.0.2</ojdbc7.version>
-		<commons-logging.version>1.2</commons-logging.version>
-		<commons-fileupload.version>1.2.1</commons-fileupload.version>
-		<commons-io.version>1.3.2</commons-io.version>
-		<commons-lang3.version>3.7</commons-lang3.version>
-		<mybatis-generator.version>1.3.5</mybatis-generator.version>
-		<jjwt.version>0.9.1</jjwt.version>
-		<mybatisplus-boot-starter.version>2.3</mybatisplus-boot-starter.version>
-		<springfox-swagger2.version>2.6.1</springfox-swagger2.version>
-		<fastjson.version>1.2.15</fastjson.version>
-		<jjwt.version>0.9.1</jjwt.version>
-		<feign-form-spring.version>3.2.2</feign-form-spring.version>
-		<HikariCP.version>3.2.0</HikariCP.version>
 	</properties>
 
 	<dependencies>
-	
-		<!-- 上面父节点spring-cloud-starter已经引入
+	     <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-web</artifactId>
+	    </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-
-		服务调用
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-feign</artifactId>
-		</dependency>
-		 -->
-		<dependency>
-			<groupId>io.github.openfeign.form</groupId>
-			<artifactId>feign-form-spring</artifactId>
-			<version>${feign-form-spring.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>io.github.openfeign.form</groupId>
-			<artifactId>feign-form</artifactId>
-			<version>${feign-form-spring.version}</version>
-		</dependency>
-
-		<!-- HikariCP -->
-		<dependency>
-			<groupId>com.zaxxer</groupId>
-			<artifactId>HikariCP</artifactId>
-			<version>${HikariCP.version}</version>
-		</dependency>
-
-		<!-- mybatis-plus begin -->
-		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>${mybatisplus-boot-starter.version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>tomcat-jdbc</artifactId>
-					<groupId>org.apache.tomcat</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<!-- mybatis-plus end -->
-
-		<!-- oracle 12c -->
-		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc7</artifactId>
-			<version>${ojdbc7.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>${fastjson.version}</version>
-		</dependency>
-
-		<!-- swagger -->
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>${springfox-swagger2.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>${commons-lang3.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>${commons-io.version}</version>
-		</dependency>
-
-		<!-- JWT -->
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt</artifactId>
-			<version>${jjwt.version}</version>
-		</dependency>
-
-		<!-- redis集成 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
-		</dependency>
-
-		<!-- mq -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.ly.mssp</groupId>
-			<artifactId>ly-mssp-harbor</artifactId>
-			<version>1.0.0.RELEASE</version>
-		</dependency>
-
 		<!--热部署 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -161,27 +38,9 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
-
-	<repositories>
-		<repository>
-			<id>public</id>
-			<name>public</name>
-			<url>http://192.168.30.58:8081/repository/public/</url>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>public</id>
-			<name>public</name>
-			<url>http://192.168.30.58:8081/repository/public/</url>
-		</pluginRepository>
-	</pluginRepositories>
-
-
+	
 	<build>
 		<plugins>
-
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
