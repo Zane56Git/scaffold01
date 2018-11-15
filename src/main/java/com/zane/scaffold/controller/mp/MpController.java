@@ -14,22 +14,22 @@ import com.zane.scaffold.util.common.JsonResult;
 
 @RestController
 @RequestMapping("/mp")
-//@Api("业务域代码集API")
+// @Api("业务域代码集API")
 public class MpController {
 	@Autowired
 	private MPService mpService;
-	 
-    @RequestMapping("/query")
-    public String index() {
-    	EntityWrapper<Mp> ew = new EntityWrapper<Mp>();
+
+	@RequestMapping("/query")
+	public String index() {
+		EntityWrapper<Mp> ew = new EntityWrapper<Mp>();
 
 		List<Mp> list = mpService.selectList(ew);
-		System.out.println("MP"+list);
-        return "Hello Zane! This is  Spring Boot 2.0!";
-    } 
-    
-    //返回json
-    @GetMapping("/queryJson")
+		System.out.println("MP" + list);
+		return "Hello Zane! This is  Spring Boot 2.0!";
+	}
+
+	// 返回json
+	@GetMapping("/queryJson")
 	public JsonResult<?> query(String id, String name) {
 		try {
 			EntityWrapper<Mp> ew = new EntityWrapper<Mp>();
