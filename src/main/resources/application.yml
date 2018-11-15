@@ -1,3 +1,24 @@
 #配置端口，不配置默认为8080
 server:
   port: 9090
+  
+spring : 
+  #数据库配置 
+  datasource : 
+      url: jdbc:mysql://localhost:3306/mp?characterEncoding=UTF-8
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+      max-idle : 10
+      min-idle : 5 
+      initial-size : 5
+      validation-query : SELECT  1
+
+#mybatis配置       
+mybatis-plus: 
+  typeAliasesPackage : com.zane.scaffold.entity.*
+  mapperLocations : classpath:mapper/*/*Mapper.xml
+    # 原生配置
+  configuration:
+    #auto-mapping-behavior: FULL
+    map-underscore-to-camel-case: true   # 驼峰命名，可以直接映射驼峰字段
