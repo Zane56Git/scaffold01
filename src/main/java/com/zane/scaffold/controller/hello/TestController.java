@@ -27,7 +27,7 @@ public class TestController {
 		HttpServletRequest request = null;
 		String tableName = "tbl_employee";
 		String whereSql = " where id='1'";
-		// sonar_Test
+		// sonar_Test,jenkins_Test
 		// String chooseCol = "KCBH!!SplitTwo!!KCMC!!SplitTwo!!YYXDM" +
 		// "!!SplitTwo!!SYXS!!SplitTwo!!XS!!SplitTwo!!ND";
 		String chooseCol = "id!!SplitTwo!!last_name!!SplitTwo!!email!!SplitTwo!!gender!!SplitTwo!!age!!SplitTwo!!delete_flag";
