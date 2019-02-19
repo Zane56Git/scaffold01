@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.zane.scaffold.util.common;
+package com.zane.scaffold.util.threads;
 
 /**
  * @author Zane
